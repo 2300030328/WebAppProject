@@ -24,6 +24,16 @@ export default function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Thank you, ${formData.name}! Your feedback is submitted.`);
+
+    // Clear the form after submission
+    setFormData({
+      name: "",
+      email: "",
+      feedback: "",
+    });
+
+    // Reset to first step
+    setStep(1);
   };
 
   return (
@@ -66,12 +76,20 @@ export default function App() {
 
         <div className="buttons">
           {step > 1 && (
-            <button type="button" onClick={handleBack} className="secondary-btn">
+            <button
+              type="button"
+              onClick={handleBack}
+              className="secondary-btn"
+            >
               Back
             </button>
           )}
           {step < 2 ? (
-            <button type="button" onClick={handleNext} className="primary-btn">
+            <button
+              type="button"
+              onClick={handleNext}
+              className="primary-btn"
+            >
               Next
             </button>
           ) : (
