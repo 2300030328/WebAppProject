@@ -42,7 +42,7 @@ export default function App() {
       <form onSubmit={handleSubmit} className="survey-form">
         {step === 1 && (
           <>
-            <label>Nacccccccccme:</label>
+            <label>Name:</label>
             <input
               type="text"
               name="name"
@@ -51,7 +51,7 @@ export default function App() {
               required
             />
 
-            <label>Email bublue:</label>
+            <label>Email:</label>
             <input
               type="email"
               name="email"
